@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eMIS_MobileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="eMIS_MobileEntities1" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spJobControl" ReturnType="Collection(eMIS_MobileModel.spJobControl_Result)">
+      <Parameter Name="Department" Mode="In" Type="String" />
+      <Parameter Name="Municipality" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spJobControl1" ReturnType="Collection(eMIS_MobileModel.spJobControl_Result)">
+      <Parameter Name="Department" Mode="In" Type="String" />
+      <Parameter Name="Municipality" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spJobControl_Result">
+    <Property Type="String" Name="Device_Desc" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="JobsAlocated" Nullable="true" />
+    <Property Type="Int32" Name="JobsReceived" Nullable="false" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Assigned_unit_Mac" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cntrl_num" Nullable="true" />
+  </ComplexType>
+</Schema>

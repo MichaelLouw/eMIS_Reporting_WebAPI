@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eMIS_ReportingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'eMIS_Reporting.dbo.BO_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BO_User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="Surname" Type="varchar" MaxLength="250" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="Security_Level" Type="int" />
+    <Property Name="Contact_Number" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="User_Name" Type="varchar" MaxLength="250" />
+    <Property Name="Department" Type="varchar" MaxLength="250" />
+    <Property Name="Municipality" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Reports">
+    <Key>
+      <PropertyRef Name="reportId" />
+    </Key>
+    <Property Name="reportId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="reportName" Type="varchar" MaxLength="1000" />
+    <Property Name="reportDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="parentReportId" Type="int" />
+    <Property Name="reportPath" Type="varchar" MaxLength="1000" />
+    <Property Name="reportIcon" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <Function Name="spGetReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spGetUserByEmailPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spSearchReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="search" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="eMIS_ReportingModelStoreContainer">
+    <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BO_User" EntityType="Self.BO_User" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BO_User].[User_ID] AS [User_ID], 
+    [BO_User].[Name] AS [Name], 
+    [BO_User].[Surname] AS [Surname], 
+    [BO_User].[Password] AS [Password], 
+    [BO_User].[Security_Level] AS [Security_Level], 
+    [BO_User].[Contact_Number] AS [Contact_Number], 
+    [BO_User].[Email] AS [Email], 
+    [BO_User].[User_Name] AS [User_Name], 
+    [BO_User].[Department] AS [Department], 
+    [BO_User].[Municipality] AS [Municipality]
+    FROM [dbo].[BO_User] AS [BO_User]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

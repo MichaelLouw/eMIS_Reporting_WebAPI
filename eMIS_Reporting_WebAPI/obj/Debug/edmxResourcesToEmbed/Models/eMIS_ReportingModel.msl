@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eMIS_ReportingModelStoreContainer" CdmEntityContainer="eMIS_ReportingEntities">
+    <EntitySetMapping Name="Reports">
+      <EntityTypeMapping TypeName="eMIS_ReportingModel.Report">
+        <MappingFragment StoreEntitySet="Reports">
+          <ScalarProperty Name="reportId" ColumnName="reportId" />
+          <ScalarProperty Name="reportName" ColumnName="reportName" />
+          <ScalarProperty Name="reportDescription" ColumnName="reportDescription" />
+          <ScalarProperty Name="parentReportId" ColumnName="parentReportId" />
+          <ScalarProperty Name="reportPath" ColumnName="reportPath" />
+          <ScalarProperty Name="reportIcon" ColumnName="reportIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BO_User">
+      <EntityTypeMapping TypeName="eMIS_ReportingModel.BO_User">
+        <MappingFragment StoreEntitySet="BO_User">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Security_Level" ColumnName="Security_Level" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Municipality" ColumnName="Municipality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="eMIS_ReportingModel.BO_User">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="eMIS_ReportingModel.Store.spInsertNewUser">
+            <ScalarProperty Name="User_Name" ParameterName="UserName" />
+            <ScalarProperty Name="Contact_Number" ParameterName="Number" />
+            <ScalarProperty Name="Municipality" ParameterName="Municipality" />
+            <ScalarProperty Name="Department" ParameterName="Department" />
+            <ScalarProperty Name="Email" ParameterName="Email" />
+            <ScalarProperty Name="Password" ParameterName="Password" />
+            <ScalarProperty Name="Surname" ParameterName="Surname" />
+            <ScalarProperty Name="Name" ParameterName="Name" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetReports" FunctionName="eMIS_ReportingModel.Store.spGetReports">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_ReportingModel.spGetReports_Result">
+          <ScalarProperty Name="reportId" ColumnName="reportId" />
+          <ScalarProperty Name="reportName" ColumnName="reportName" />
+          <ScalarProperty Name="reportDescription" ColumnName="reportDescription" />
+          <ScalarProperty Name="parentReportId" ColumnName="parentReportId" />
+          <ScalarProperty Name="reportPath" ColumnName="reportPath" />
+          <ScalarProperty Name="reportIcon" ColumnName="reportIcon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetUserByEmailPassword" FunctionName="eMIS_ReportingModel.Store.spGetUserByEmailPassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_ReportingModel.spGetUserByEmailPassword_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Security_Level" ColumnName="Security_Level" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Municipality" ColumnName="Municipality" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchReports" FunctionName="eMIS_ReportingModel.Store.spSearchReports">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_ReportingModel.spSearchReports_Result">
+          <ScalarProperty Name="reportId" ColumnName="reportId" />
+          <ScalarProperty Name="reportName" ColumnName="reportName" />
+          <ScalarProperty Name="reportDescription" ColumnName="reportDescription" />
+          <ScalarProperty Name="parentReportId" ColumnName="parentReportId" />
+          <ScalarProperty Name="reportPath" ColumnName="reportPath" />
+          <ScalarProperty Name="reportIcon" ColumnName="reportIcon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="eMIS_ReportingModel.Area">
+        <MappingFragment StoreEntitySet="Areas">
+          <ScalarProperty Name="Area_Name" ColumnName="Area_Name" />
+          <ScalarProperty Name="Area_ID" ColumnName="Area_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="eMIS_ReportingModel.Department">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="Municipality_ID" ColumnName="Municipality_ID" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+          <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserStatus">
+      <EntityTypeMapping TypeName="eMIS_ReportingModel.UserStatu">
+        <MappingFragment StoreEntitySet="UserStatus">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetDepartments" FunctionName="eMIS_ReportingModel.Store.spGetDepartments">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_ReportingModel.spGetDepartments_Result">
+          <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+          <ScalarProperty Name="Municipality_ID" ColumnName="Municipality_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetPassword" FunctionName="eMIS_ReportingModel.Store.spGetPassword" />
+    <FunctionImportMapping FunctionImportName="spInsertNewUser" FunctionName="eMIS_ReportingModel.Store.spInsertNewUser" />
+    <FunctionImportMapping FunctionImportName="spSaveNewPassword" FunctionName="eMIS_ReportingModel.Store.spSaveNewPassword" />
+    <EntitySetMapping Name="Municipalities">
+      <EntityTypeMapping TypeName="eMIS_ReportingModel.Municipality">
+        <MappingFragment StoreEntitySet="Municipalities">
+          <ScalarProperty Name="Municipality1" ColumnName="Municipality" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spActivateEmail" FunctionName="eMIS_ReportingModel.Store.spActivateEmail" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eMIS_ReportingModelStoreContainer" CdmEntityContainer="eMIS_ReportingEntities">
+    <EntitySetMapping Name="Reports">
+      <EntityTypeMapping TypeName="eMIS_ReportingModel.Report">
+        <MappingFragment StoreEntitySet="Reports">
+          <ScalarProperty Name="reportId" ColumnName="reportId" />
+          <ScalarProperty Name="reportName" ColumnName="reportName" />
+          <ScalarProperty Name="reportDescription" ColumnName="reportDescription" />
+          <ScalarProperty Name="parentReportId" ColumnName="parentReportId" />
+          <ScalarProperty Name="reportPath" ColumnName="reportPath" />
+          <ScalarProperty Name="reportIcon" ColumnName="reportIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BO_User">
+      <EntityTypeMapping TypeName="eMIS_ReportingModel.BO_User">
+        <MappingFragment StoreEntitySet="BO_User">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Security_Level" ColumnName="Security_Level" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Municipality" ColumnName="Municipality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetReports" FunctionName="eMIS_ReportingModel.Store.spGetReports">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_ReportingModel.spGetReports_Result">
+          <ScalarProperty Name="reportId" ColumnName="reportId" />
+          <ScalarProperty Name="reportName" ColumnName="reportName" />
+          <ScalarProperty Name="reportDescription" ColumnName="reportDescription" />
+          <ScalarProperty Name="parentReportId" ColumnName="parentReportId" />
+          <ScalarProperty Name="reportPath" ColumnName="reportPath" />
+          <ScalarProperty Name="reportIcon" ColumnName="reportIcon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetUserByEmailPassword" FunctionName="eMIS_ReportingModel.Store.spGetUserByEmailPassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_ReportingModel.spGetUserByEmailPassword_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Security_Level" ColumnName="Security_Level" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Municipality" ColumnName="Municipality" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchReports" FunctionName="eMIS_ReportingModel.Store.spSearchReports">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_ReportingModel.spSearchReports_Result">
+          <ScalarProperty Name="reportId" ColumnName="reportId" />
+          <ScalarProperty Name="reportName" ColumnName="reportName" />
+          <ScalarProperty Name="reportDescription" ColumnName="reportDescription" />
+          <ScalarProperty Name="parentReportId" ColumnName="parentReportId" />
+          <ScalarProperty Name="reportPath" ColumnName="reportPath" />
+          <ScalarProperty Name="reportIcon" ColumnName="reportIcon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

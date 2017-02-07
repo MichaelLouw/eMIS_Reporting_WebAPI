@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eMIS_MobileModel1StoreContainer" CdmEntityContainer="eMIS_MobileEntities">
+    <EntitySetMapping Name="Calls">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.Call">
+        <MappingFragment StoreEntitySet="Calls">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Case_Number" ColumnName="Case_Number" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="SubCategory" ColumnName="SubCategory" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Street1" ColumnName="Street1" />
+          <ScalarProperty Name="Street2" ColumnName="Street2" />
+          <ScalarProperty Name="Street3" ColumnName="Street3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Case_Status" ColumnName="Case_Status" />
+          <ScalarProperty Name="CallTypes" ColumnName="CallTypes" />
+          <ScalarProperty Name="SLA" ColumnName="SLA" />
+          <ScalarProperty Name="DateTimeStampSent" ColumnName="DateTimeStampSent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calls_v2">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.Calls_v2">
+        <MappingFragment StoreEntitySet="Calls_v2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CTRL" ColumnName="CTRL" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="FAULT_TYPE" ColumnName="FAULT_TYPE" />
+          <ScalarProperty Name="RESPONSE_TIME" ColumnName="RESPONSE_TIME" />
+          <ScalarProperty Name="CRDATETIME" ColumnName="CRDATETIME" />
+          <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPLAINTS">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.COMPLAINT">
+        <MappingFragment StoreEntitySet="COMPLAINTS">
+          <ScalarProperty Name="COMPNO" ColumnName="COMPNO" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="GISKEY" ColumnName="GISKEY" />
+          <ScalarProperty Name="MYTEXT" ColumnName="MYTEXT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eMis_Mobile">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.eMis_Mobile">
+        <MappingFragment StoreEntitySet="eMis_Mobile">
+          <ScalarProperty Name="Cntrl_num" ColumnName="Cntrl_num" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Fault" ColumnName="Fault" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+          <ScalarProperty Name="Stand" ColumnName="Stand" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Street_No" ColumnName="Street_No" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Recieved_HD" ColumnName="Recieved_HD" />
+          <ScalarProperty Name="Receive_DateT" ColumnName="Receive_DateT" />
+          <ScalarProperty Name="Start_DateT" ColumnName="Start_DateT" />
+          <ScalarProperty Name="Delay_DateT" ColumnName="Delay_DateT" />
+          <ScalarProperty Name="Completed_DateT" ColumnName="Completed_DateT" />
+          <ScalarProperty Name="Escalation_Time" ColumnName="Escalation_Time" />
+          <ScalarProperty Name="Assigned_unit_Mac" ColumnName="Assigned_unit_Mac" />
+          <ScalarProperty Name="Completed_Desc" ColumnName="Completed_Desc" />
+          <ScalarProperty Name="Delayed_Desc" ColumnName="Delayed_Desc" />
+          <ScalarProperty Name="Revison" ColumnName="Revison" />
+          <ScalarProperty Name="Data_Changed" ColumnName="Data_Changed" />
+          <ScalarProperty Name="Client_Mun" ColumnName="Client_Mun" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emis_mobile_devices">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.emis_mobile_devices">
+        <MappingFragment StoreEntitySet="emis_mobile_devices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="reload_time" ColumnName="reload_time" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Record" ColumnName="Record" />
+          <ScalarProperty Name="Update" ColumnName="Update" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Client_Mun" ColumnName="Client_Mun" />
+          <ScalarProperty Name="Device_Desc" ColumnName="Device_Desc" />
+          <ScalarProperty Name="Sup_Mac" ColumnName="Sup_Mac" />
+          <ScalarProperty Name="UseWifiOnly4Photos" ColumnName="UseWifiOnly4Photos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emis_mobile_gps">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.emis_mobile_gps">
+        <MappingFragment StoreEntitySet="emis_mobile_gps">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Long" ColumnName="Long" />
+          <ScalarProperty Name="IMEI_Num" ColumnName="IMEI_Num" />
+          <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emis_notifications_sent">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.emis_notifications_sent">
+        <MappingFragment StoreEntitySet="emis_notifications_sent">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cntrl_num" ColumnName="cntrl_num" />
+          <ScalarProperty Name="DateTimeSent" ColumnName="DateTimeSent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faultreasons">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.faultreason">
+        <MappingFragment StoreEntitySet="faultreasons">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="history_store">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.history_store">
+        <MappingFragment StoreEntitySet="history_store">
+          <ScalarProperty Name="timemark" ColumnName="timemark" />
+          <ScalarProperty Name="table_name" ColumnName="table_name" />
+          <ScalarProperty Name="pk_date_src" ColumnName="pk_date_src" />
+          <ScalarProperty Name="pk_date_dest" ColumnName="pk_date_dest" />
+          <ScalarProperty Name="record_state" ColumnName="record_state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HM_Devices">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.HM_Devices">
+        <MappingFragment StoreEntitySet="HM_Devices">
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="Municipality" ColumnName="Municipality" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="GCMToken" ColumnName="GCMToken" />
+          <ScalarProperty Name="TransactionURL" ColumnName="TransactionURL" />
+          <ScalarProperty Name="TransactionPort" ColumnName="TransactionPort" />
+          <ScalarProperty Name="SettingsURL" ColumnName="SettingsURL" />
+          <ScalarProperty Name="SettingsPort" ColumnName="SettingsPort" />
+          <ScalarProperty Name="Reading1RangeMin" ColumnName="Reading1RangeMin" />
+          <ScalarProperty Name="Reading1RangeMax" ColumnName="Reading1RangeMax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HM_FaultReasons">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.HM_FaultReasons">
+        <MappingFragment StoreEntitySet="HM_FaultReasons">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HM_HandyManReadings">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.HM_HandyManReadings">
+        <MappingFragment StoreEntitySet="HM_HandyManReadings">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="MeterNumber" ColumnName="MeterNumber" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+          <ScalarProperty Name="Stand" ColumnName="Stand" />
+          <ScalarProperty Name="Portion" ColumnName="Portion" />
+          <ScalarProperty Name="StreetNo" ColumnName="StreetNo" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="Reading1" ColumnName="Reading1" />
+          <ScalarProperty Name="Reading2" ColumnName="Reading2" />
+          <ScalarProperty Name="NoReadingReason" ColumnName="NoReadingReason" />
+          <ScalarProperty Name="FaultReason" ColumnName="FaultReason" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="Inserted" ColumnName="Inserted" />
+          <ScalarProperty Name="Checksum" ColumnName="Checksum" />
+          <ScalarProperty Name="Reading1MinRange" ColumnName="Reading1MinRange" />
+          <ScalarProperty Name="Reading1MaxRange" ColumnName="Reading1MaxRange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HM_NoReadingReasons">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.HM_NoReadingReasons">
+        <MappingFragment StoreEntitySet="HM_NoReadingReasons">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAPTESTs">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.MAPTEST">
+        <MappingFragment StoreEntitySet="MAPTEST">
+          <ScalarProperty Name="GISKEY" ColumnName="GISKEY" />
+          <ScalarProperty Name="TEST" ColumnName="TEST" />
+          <ScalarProperty Name="Hello" ColumnName="Hello" />
+          <ScalarProperty Name="COMPNO" ColumnName="COMPNO" />
+          <ScalarProperty Name="Column_5" ColumnName="Column_5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comps">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.Comp">
+        <MappingFragment StoreEntitySet="Comp">
+          <ScalarProperty Name="COMPNO" ColumnName="COMPNO" />
+          <ScalarProperty Name="CRDATE" ColumnName="CRDATE" />
+          <ScalarProperty Name="CRHOURS" ColumnName="CRHOURS" />
+          <ScalarProperty Name="CRMIN" ColumnName="CRMIN" />
+          <ScalarProperty Name="CRSEC" ColumnName="CRSEC" />
+          <ScalarProperty Name="CCDATE" ColumnName="CCDATE" />
+          <ScalarProperty Name="CCHOURS" ColumnName="CCHOURS" />
+          <ScalarProperty Name="CCMIN" ColumnName="CCMIN" />
+          <ScalarProperty Name="CCSEC" ColumnName="CCSEC" />
+          <ScalarProperty Name="CWDATE" ColumnName="CWDATE" />
+          <ScalarProperty Name="CWHOURS" ColumnName="CWHOURS" />
+          <ScalarProperty Name="CWMIN" ColumnName="CWMIN" />
+          <ScalarProperty Name="CWSEC" ColumnName="CWSEC" />
+          <ScalarProperty Name="HOWREC" ColumnName="HOWREC" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+          <ScalarProperty Name="TELHOME" ColumnName="TELHOME" />
+          <ScalarProperty Name="TDESC" ColumnName="TDESC" />
+          <ScalarProperty Name="TOWN" ColumnName="TOWN" />
+          <ScalarProperty Name="STAND" ColumnName="STAND" />
+          <ScalarProperty Name="PORTION" ColumnName="PORTION" />
+          <ScalarProperty Name="LEAD" ColumnName="LEAD" />
+          <ScalarProperty Name="ADDNO" ColumnName="ADDNO" />
+          <ScalarProperty Name="ADDSTREET" ColumnName="ADDSTREET" />
+          <ScalarProperty Name="FAULT_DESC" ColumnName="FAULT_DESC" />
+          <ScalarProperty Name="URGENCY" ColumnName="URGENCY" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="CORNER_A" ColumnName="CORNER_A" />
+          <ScalarProperty Name="TIMESHEET_" ColumnName="TIMESHEET#" />
+          <ScalarProperty Name="MAN_" ColumnName="MAN#" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="TEAM" ColumnName="TEAM" />
+          <ScalarProperty Name="TS_BACK" ColumnName="TS_BACK" />
+          <ScalarProperty Name="TS_DATE" ColumnName="TS_DATE" />
+          <ScalarProperty Name="ACCOUNT" ColumnName="ACCOUNT" />
+          <ScalarProperty Name="CUMETER" ColumnName="CUMETER" />
+          <ScalarProperty Name="PLACEMENT_NO" ColumnName="PLACEMENT_NO" />
+          <ScalarProperty Name="PROPREF" ColumnName="PROPREF" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="INSTALL_TYPE" ColumnName="INSTALL_TYPE" />
+          <ScalarProperty Name="ACTION_CODE" ColumnName="ACTION_CODE" />
+          <ScalarProperty Name="TEST_TIME" ColumnName="TEST_TIME" />
+          <ScalarProperty Name="COMMENTS_NEW" ColumnName="COMMENTS_NEW" />
+          <ScalarProperty Name="PAGENO" ColumnName="PAGENO" />
+          <ScalarProperty Name="CRTIME" ColumnName="CRTIME" />
+          <ScalarProperty Name="CWTIME" ColumnName="CWTIME" />
+          <ScalarProperty Name="OPERATOR" ColumnName="OPERATOR" />
+          <ScalarProperty Name="SEWMAIN" ColumnName="SEWMAIN" />
+          <ScalarProperty Name="SEWSTAND" ColumnName="SEWSTAND" />
+          <ScalarProperty Name="ACCEPT_CHARGE" ColumnName="ACCEPT_CHARGE" />
+          <ScalarProperty Name="PRINT_FLAG" ColumnName="PRINT_FLAG" />
+          <ScalarProperty Name="EMAIL_FLAG" ColumnName="EMAIL_FLAG" />
+          <ScalarProperty Name="EMAIL_ON" ColumnName="EMAIL_ON" />
+          <ScalarProperty Name="EMAIL_TIME" ColumnName="EMAIL_TIME" />
+          <ScalarProperty Name="FAX_FLAG" ColumnName="FAX_FLAG" />
+          <ScalarProperty Name="FAX_ON" ColumnName="FAX_ON" />
+          <ScalarProperty Name="FAX_TIME" ColumnName="FAX_TIME" />
+          <ScalarProperty Name="CCTIME" ColumnName="CCTIME" />
+          <ScalarProperty Name="CFDATE" ColumnName="CFDATE" />
+          <ScalarProperty Name="CFTIME" ColumnName="CFTIME" />
+          <ScalarProperty Name="FRONT_DESK" ColumnName="FRONT_DESK" />
+          <ScalarProperty Name="URGENT" ColumnName="URGENT" />
+          <ScalarProperty Name="PLANT_ASSET" ColumnName="PLANT_ASSET" />
+          <ScalarProperty Name="SMS_FLAG" ColumnName="SMS_FLAG" />
+          <ScalarProperty Name="SMS_ON" ColumnName="SMS_ON" />
+          <ScalarProperty Name="LETTER_FLAG" ColumnName="LETTER_FLAG" />
+          <ScalarProperty Name="LETTER_ON" ColumnName="LETTER_ON" />
+          <ScalarProperty Name="EMAIL_ADDRESS" ColumnName="EMAIL_ADDRESS" />
+          <ScalarProperty Name="FAX_NUMBER" ColumnName="FAX_NUMBER" />
+          <ScalarProperty Name="VACUM" ColumnName="VACUM" />
+          <ScalarProperty Name="CCDPERS" ColumnName="CCDPERS" />
+          <ScalarProperty Name="CFDPERS" ColumnName="CFDPERS" />
+          <ScalarProperty Name="GISKEY" ColumnName="GISKEY" />
+          <ScalarProperty Name="PARK_DATE" ColumnName="PARK_DATE" />
+          <ScalarProperty Name="PARK_PERS" ColumnName="PARK_PERS" />
+          <ScalarProperty Name="ORIGINAL" ColumnName="ORIGINAL" />
+          <ScalarProperty Name="SEWTANKKEY" ColumnName="SEWTANKKEY" />
+          <ScalarProperty Name="PAYMENT_AMOUNT" ColumnName="PAYMENT_AMOUNT" />
+          <ScalarProperty Name="PAYMENT_RECIEPT" ColumnName="PAYMENT_RECIEPT" />
+          <ScalarProperty Name="PAYMENT_DATE" ColumnName="PAYMENT_DATE" />
+          <ScalarProperty Name="JC_SORT" ColumnName="JC_SORT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emis_mobile_comp_list">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.emis_mobile_comp_list">
+        <MappingFragment StoreEntitySet="emis_mobile_comp_list">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Client_Mun" ColumnName="Client_Mun" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emis_mobile_delay_list">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.emis_mobile_delay_list">
+        <MappingFragment StoreEntitySet="emis_mobile_delay_list">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Client_Mun" ColumnName="Client_Mun" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emis_mobile_devices_allocation">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.emis_mobile_devices_allocation">
+        <MappingFragment StoreEntitySet="emis_mobile_devices_allocation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="TOWNSHIP" ColumnName="TOWNSHIP" />
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="STANDBY_CELL_T" ColumnName="STANDBY_CELL_T" />
+          <ScalarProperty Name="STANDBY_CELL_S" ColumnName="STANDBY_CELL_S" />
+          <ScalarProperty Name="Dispatch_YN" ColumnName="Dispatch_YN" />
+          <ScalarProperty Name="SUB_AREA" ColumnName="SUB_AREA" />
+          <ScalarProperty Name="EMAIL_1" ColumnName="EMAIL_1" />
+          <ScalarProperty Name="EMIS_2" ColumnName="EMIS_2" />
+          <ScalarProperty Name="SEND_EMAIL" ColumnName="SEND_EMAIL" />
+          <ScalarProperty Name="DAYTIME_CELL" ColumnName="DAYTIME_CELL" />
+          <ScalarProperty Name="DAYTIME_AREA" ColumnName="DAYTIME_AREA" />
+          <ScalarProperty Name="STANDBY_S_MAC" ColumnName="STANDBY_S_MAC" />
+          <ScalarProperty Name="STANDBY_T_MAC" ColumnName="STANDBY_T_MAC" />
+          <ScalarProperty Name="DAYTIME_MAC" ColumnName="DAYTIME_MAC" />
+          <ScalarProperty Name="DISTRICT" ColumnName="DISTRICT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emis_mobile_locationlogger">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.emis_mobile_locationlogger">
+        <MappingFragment StoreEntitySet="emis_mobile_locationlogger">
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Inserted" ColumnName="Inserted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emis_mobile_standby">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.emis_mobile_standby">
+        <MappingFragment StoreEntitySet="emis_mobile_standby">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SS_IMEI" ColumnName="SS_IMEI" />
+          <ScalarProperty Name="SUP_IMEI" ColumnName="SUP_IMEI" />
+          <ScalarProperty Name="SS_IMEI_ChangeTo" ColumnName="SS_IMEI_ChangeTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eMis_MobileH">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.eMis_MobileH">
+        <MappingFragment StoreEntitySet="eMis_MobileH">
+          <ScalarProperty Name="Cntrl_num" ColumnName="Cntrl_num" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Fault" ColumnName="Fault" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+          <ScalarProperty Name="Stand" ColumnName="Stand" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Street_No" ColumnName="Street_No" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Recieved_HD" ColumnName="Recieved_HD" />
+          <ScalarProperty Name="Receive_DateT" ColumnName="Receive_DateT" />
+          <ScalarProperty Name="Start_DateT" ColumnName="Start_DateT" />
+          <ScalarProperty Name="Delay_DateT" ColumnName="Delay_DateT" />
+          <ScalarProperty Name="Completed_DateT" ColumnName="Completed_DateT" />
+          <ScalarProperty Name="Escalation_Time" ColumnName="Escalation_Time" />
+          <ScalarProperty Name="Assigned_unit_Mac" ColumnName="Assigned_unit_Mac" />
+          <ScalarProperty Name="Completed_Reason" ColumnName="Completed_Reason" />
+          <ScalarProperty Name="Delay_Reason" ColumnName="Delay_Reason" />
+          <ScalarProperty Name="Revision" ColumnName="Revision" />
+          <ScalarProperty Name="Data_Changed" ColumnName="Data_Changed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emis_notifications">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.emis_notifications">
+        <MappingFragment StoreEntitySet="emis_notifications">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="device_id" ColumnName="device_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Dash_Totals">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.M_Dash_Totals">
+        <MappingFragment StoreEntitySet="M_Dash_Totals">
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="Total_Jobs" ColumnName="Total_Jobs" />
+          <ScalarProperty Name="Jobs_Over" ColumnName="Jobs_Over" />
+          <ScalarProperty Name="Jobs_in_Time" ColumnName="Jobs_in_Time" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Job_Type" ColumnName="Job_Type" />
+          <ScalarProperty Name="Jobs_no_Response_Time" ColumnName="Jobs_no_Response_Time" />
+          <ScalarProperty Name="Open_Jobs_inside_response_time_framework" ColumnName="Open_Jobs_inside_response_time_framework" />
+          <ScalarProperty Name="Open_Jobs_outside_response_time_framework" ColumnName="Open_Jobs_outside_response_time_framework" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SQL_DASH">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.SQL_DASH">
+        <MappingFragment StoreEntitySet="SQL_DASH">
+          <ScalarProperty Name="CTRL" ColumnName="CTRL" />
+          <ScalarProperty Name="CRDATE" ColumnName="CRDATE" />
+          <ScalarProperty Name="CRTIME" ColumnName="CRTIME" />
+          <ScalarProperty Name="CWDATE" ColumnName="CWDATE" />
+          <ScalarProperty Name="CWTIME" ColumnName="CWTIME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="STATUS_DATE" ColumnName="STATUS_DATE" />
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="FAULT_TYPE" ColumnName="FAULT_TYPE" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="GISKEY" ColumnName="GISKEY" />
+          <ScalarProperty Name="TOWNSHIP" ColumnName="TOWNSHIP" />
+          <ScalarProperty Name="RESPONSE_TIME" ColumnName="RESPONSE_TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tabi_Data">
+      <EntityTypeMapping TypeName="eMIS_MobileModel1.Tabi_Data">
+        <MappingFragment StoreEntitySet="Tabi_Data">
+          <ScalarProperty Name="Agent_ID" ColumnName="Agent_ID" />
+          <ScalarProperty Name="Ani" ColumnName="Ani" />
+          <ScalarProperty Name="Call_Date" ColumnName="Call_Date" />
+          <ScalarProperty Name="Call_ID" ColumnName="Call_ID" />
+          <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="dnis" ColumnName="dnis" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="End_Reason" ColumnName="End_Reason" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Queue" ColumnName="Queue" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="Status_Detail" ColumnName="Status_Detail" />
+          <ScalarProperty Name="Status_Group" ColumnName="Status_Group" />
+          <ScalarProperty Name="Status_Text" ColumnName="Status_Text" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Row_ID" ColumnName="Row_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ListComplaints" FunctionName="eMIS_MobileModel1.Store.ListComplaints">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.ListComplaints_Result">
+          <ScalarProperty Name="COMPNO" ColumnName="COMPNO" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="GISKEY" ColumnName="GISKEY" />
+          <ScalarProperty Name="MYTEXT" ColumnName="MYTEXT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="eMIS_MobileModel1.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="eMIS_MobileModel1.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="eMIS_MobileModel1.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="eMIS_MobileModel1.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="eMIS_MobileModel1.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="eMIS_MobileModel1.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="eMIS_MobileModel1.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="spGetAvailableDevices" FunctionName="eMIS_MobileModel1.Store.spGetAvailableDevices">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.spGetAvailableDevices_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="OpenJobs" ColumnName="OpenJobs" />
+          <ScalarProperty Name="Device_Desc" ColumnName="Device_Desc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetJobsForTownshipDeviceAssigned" FunctionName="eMIS_MobileModel1.Store.spGetJobsForTownshipDeviceAssigned">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.spGetJobsForTownshipDeviceAssigned_Result">
+          <ScalarProperty Name="Cntrl_num" ColumnName="Cntrl_num" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+          <ScalarProperty Name="Fault" ColumnName="Fault" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Recieved_HD" ColumnName="Recieved_HD" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Stand" ColumnName="Stand" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Street_No" ColumnName="Street_No" />
+          <ScalarProperty Name="Delayed_Desc" ColumnName="Delayed_Desc" />
+          <ScalarProperty Name="JobAge" ColumnName="JobAge" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetJobsPerDevice" FunctionName="eMIS_MobileModel1.Store.spGetJobsPerDevice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.spGetJobsPerDevice_Result">
+          <ScalarProperty Name="Device_Desc" ColumnName="Device_Desc" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="NrOfJobsPerDevice" ColumnName="NrOfJobsPerDevice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetJobsPerTownship" FunctionName="eMIS_MobileModel1.Store.spGetJobsPerTownship">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.spGetJobsPerTownship_Result">
+          <ScalarProperty Name="NrOfJobsPerTownship" ColumnName="NrOfJobsPerTownship" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetJobsPerTownshipDevice" FunctionName="eMIS_MobileModel1.Store.spGetJobsPerTownshipDevice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.spGetJobsPerTownshipDevice_Result">
+          <ScalarProperty Name="Assigned_unit_Mac" ColumnName="Assigned_unit_Mac" />
+          <ScalarProperty Name="NrOfJobsPerDevice" ColumnName="NrOfJobsPerDevice" />
+          <ScalarProperty Name="Device_Desc" ColumnName="Device_Desc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetJobsPerTownshipDeviceAssigned" FunctionName="eMIS_MobileModel1.Store.spGetJobsPerTownshipDeviceAssigned">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.spGetJobsPerTownshipDeviceAssigned_Result">
+          <ScalarProperty Name="Cntrl_num" ColumnName="Cntrl_num" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+          <ScalarProperty Name="Fault" ColumnName="Fault" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Recieved_HD" ColumnName="Recieved_HD" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Stand" ColumnName="Stand" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Street_No" ColumnName="Street_No" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetJobsPerTownshipForDevice" FunctionName="eMIS_MobileModel1.Store.spGetJobsPerTownshipForDevice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.spGetJobsPerTownshipForDevice_Result">
+          <ScalarProperty Name="NrOfJobsPerTownship" ColumnName="NrOfJobsPerTownship" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spJobControl" FunctionName="eMIS_MobileModel1.Store.spJobControl">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.spJobControl_Result1">
+          <ScalarProperty Name="Device_Desc" ColumnName="Device_Desc" />
+          <ScalarProperty Name="JobsAlocated" ColumnName="JobsAlocated" />
+          <ScalarProperty Name="JobsReceived" ColumnName="JobsReceived" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Assigned_unit_Mac" ColumnName="Assigned_unit_Mac" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Cntrl_num" ColumnName="Cntrl_num" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateJob" FunctionName="eMIS_MobileModel1.Store.spUpdateJob">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel1.spUpdateJob_Result">
+          <ScalarProperty Name="Cntrl_num" ColumnName="Cntrl_num" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Fault" ColumnName="Fault" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+          <ScalarProperty Name="Stand" ColumnName="Stand" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Street_No" ColumnName="Street_No" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Recieved_HD" ColumnName="Recieved_HD" />
+          <ScalarProperty Name="Receive_DateT" ColumnName="Receive_DateT" />
+          <ScalarProperty Name="Start_DateT" ColumnName="Start_DateT" />
+          <ScalarProperty Name="Delay_DateT" ColumnName="Delay_DateT" />
+          <ScalarProperty Name="Completed_DateT" ColumnName="Completed_DateT" />
+          <ScalarProperty Name="Escalation_Time" ColumnName="Escalation_Time" />
+          <ScalarProperty Name="Assigned_unit_Mac" ColumnName="Assigned_unit_Mac" />
+          <ScalarProperty Name="Completed_Desc" ColumnName="Completed_Desc" />
+          <ScalarProperty Name="Delayed_Desc" ColumnName="Delayed_Desc" />
+          <ScalarProperty Name="Revison" ColumnName="Revison" />
+          <ScalarProperty Name="Data_Changed" ColumnName="Data_Changed" />
+          <ScalarProperty Name="Client_Mun" ColumnName="Client_Mun" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

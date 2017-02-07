@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Report_Data">
+    <Key>
+      <PropertyRef Name="Control_Number" />
+    </Key>
+    <Property Name="Control_Number" Type="Int32" Nullable="false" />
+    <Property Name="Receive_Date" Type="DateTime" Precision="3" />
+    <Property Name="Finish_Date" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status_Date" Type="DateTime" Precision="3" />
+    <Property Name="Department" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Fault" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Area" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="GIS_ID" Type="Int32" />
+    <Property Name="Township" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BO_User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Surname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Security_Level" Type="Int32" />
+    <Property Name="Contact_Number" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="User_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="RECNUM" />
+      <PropertyRef Name="Customer_Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="City" />
+      <PropertyRef Name="State" />
+      <PropertyRef Name="Zip" />
+      <PropertyRef Name="Phone_Number" />
+      <PropertyRef Name="Fax_Number" />
+      <PropertyRef Name="EMail_Address" />
+      <PropertyRef Name="Credit_Limit" />
+      <PropertyRef Name="Purchases" />
+      <PropertyRef Name="Balance" />
+      <PropertyRef Name="Comments" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="RECNUM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer_Number" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="14" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Zip" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Phone_Number" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Fax_Number" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EMail_Address" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Credit_Limit" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Purchases" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Balance" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Finance_Demo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Amount" Type="Double" />
+    <Property Name="Spent" Type="Double" />
+  </EntityType>
+  <EntityType Name="Finance_Demo2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Amount" Type="Double" />
+    <Property Name="Spent" Type="Double" />
+  </EntityType>
+  <EntityType Name="M_Dash_Totals">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="DEPT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Total_Jobs" Type="Int32" />
+    <Property Name="Jobs_Over" Type="Int32" />
+    <Property Name="Jobs_in_Time" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Job_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Jobs_no_Response_Time" Type="Int32" />
+    <Property Name="Open_Jobs_inside_response_time_framework" Type="Int32" />
+    <Property Name="Open_Jobs_outside_response_time_framework" Type="Int32" />
+    <Property Name="Open_Jobs_outside_respons_frame_1" Type="Int32" />
+    <Property Name="Open_Jobs_outside_respons_frame_2" Type="Int32" />
+    <Property Name="Open_Jobs_outside_respons_frame_3" Type="Int32" />
+    <Property Name="Percent_Total_SD_Outside" Type="Double" />
+    <Property Name="Percent_SD_Open_Outside" Type="Double" />
+  </EntityType>
+  <EntityType Name="SQL_DASH">
+    <Key>
+      <PropertyRef Name="CTRL" />
+      <PropertyRef Name="CRDATE" />
+      <PropertyRef Name="CRTIME" />
+      <PropertyRef Name="CWTIME" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="STATUS_DATE" />
+      <PropertyRef Name="DEPT" />
+      <PropertyRef Name="FAULT_TYPE" />
+      <PropertyRef Name="AREA" />
+      <PropertyRef Name="GISKEY" />
+      <PropertyRef Name="TOWNSHIP" />
+      <PropertyRef Name="RESPONSE_TIME" />
+    </Key>
+    <Property Name="CTRL" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CRDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CRTIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CWDATE" Type="DateTime" Precision="3" />
+    <Property Name="CWTIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="STATUS_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DEPT" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FAULT_TYPE" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AREA" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GISKEY" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TOWNSHIP" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="RESPONSE_TIME" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="WMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Report_Data" EntityType="Self.Report_Data" />
+    <EntitySet Name="BO_User" EntityType="Self.BO_User" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Finance_Demo" EntityType="Self.Finance_Demo" />
+    <EntitySet Name="Finance_Demo2" EntityType="Self.Finance_Demo2" />
+    <EntitySet Name="M_Dash_Totals" EntityType="Self.M_Dash_Totals" />
+    <EntitySet Name="SQL_DASH" EntityType="Self.SQL_DASH" />
+    <FunctionImport Name="spGetReferenceNumber" ReturnType="Collection(WMSModel.spGetReferenceNumber_Result)">
+      <Parameter Name="CTRL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetUserByEmailPassword" ReturnType="Collection(WMSModel.spGetUserByEmailPassword_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spGetReferenceNumber_Result">
+    <Property Type="Decimal" Name="CTRL" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="DateTime" Name="CRDATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CRTIME" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="CWDATE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CWTIME" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="STATUS" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="STATUS_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="DEPT" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="FAULT_TYPE" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="AREA" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="GISKEY" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TOWNSHIP" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="RESPONSE_TIME" Nullable="false" Precision="12" Scale="2" />
+    <Property Type="Int32" Name="Cntrl_num" Nullable="true" />
+    <Property Type="DateTime" Name="Duration" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Fault" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Township1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Stand" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Street" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Street_No" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Recieved_HD" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Receive_DateT" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Start_DateT" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Delay_DateT" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Completed_DateT" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="Escalation_Time" Nullable="true" />
+    <Property Type="String" Name="Assigned_unit_Mac" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Completed_Desc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Delayed_Desc" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Revison" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="String" Name="Data_Changed" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Client_Mun" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="spGetUserByEmailPassword_Result">
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Surname" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="Security_Level" Nullable="true" />
+    <Property Type="String" Name="Contact_Number" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="User_Name" Nullable="true" MaxLength="250" />
+  </ComplexType>
+</Schema>

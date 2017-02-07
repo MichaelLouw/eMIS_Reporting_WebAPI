@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WMSModelStoreContainer" CdmEntityContainer="WMSEntities">
+    <EntitySetMapping Name="Report_Data">
+      <EntityTypeMapping TypeName="WMSModel.Report_Data">
+        <MappingFragment StoreEntitySet="Report_Data">
+          <ScalarProperty Name="Control_Number" ColumnName="Control_Number" />
+          <ScalarProperty Name="Receive_Date" ColumnName="Receive_Date" />
+          <ScalarProperty Name="Finish_Date" ColumnName="Finish_Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Status_Date" ColumnName="Status_Date" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Fault" ColumnName="Fault" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="GIS_ID" ColumnName="GIS_ID" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BO_User">
+      <EntityTypeMapping TypeName="WMSModel.BO_User">
+        <MappingFragment StoreEntitySet="BO_User">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Security_Level" ColumnName="Security_Level" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="WMSModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="RECNUM" ColumnName="RECNUM" />
+          <ScalarProperty Name="Customer_Number" ColumnName="Customer_Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Fax_Number" ColumnName="Fax_Number" />
+          <ScalarProperty Name="EMail_Address" ColumnName="EMail_Address" />
+          <ScalarProperty Name="Credit_Limit" ColumnName="Credit_Limit" />
+          <ScalarProperty Name="Purchases" ColumnName="Purchases" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Finance_Demo">
+      <EntityTypeMapping TypeName="WMSModel.Finance_Demo">
+        <MappingFragment StoreEntitySet="Finance_Demo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Spent" ColumnName="Spent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Finance_Demo2">
+      <EntityTypeMapping TypeName="WMSModel.Finance_Demo2">
+        <MappingFragment StoreEntitySet="Finance_Demo2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Spent" ColumnName="Spent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Dash_Totals">
+      <EntityTypeMapping TypeName="WMSModel.M_Dash_Totals">
+        <MappingFragment StoreEntitySet="M_Dash_Totals">
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="Total_Jobs" ColumnName="Total_Jobs" />
+          <ScalarProperty Name="Jobs_Over" ColumnName="Jobs_Over" />
+          <ScalarProperty Name="Jobs_in_Time" ColumnName="Jobs_in_Time" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Job_Type" ColumnName="Job_Type" />
+          <ScalarProperty Name="Jobs_no_Response_Time" ColumnName="Jobs_no_Response_Time" />
+          <ScalarProperty Name="Open_Jobs_inside_response_time_framework" ColumnName="Open_Jobs_inside_response_time_framework" />
+          <ScalarProperty Name="Open_Jobs_outside_response_time_framework" ColumnName="Open_Jobs_outside_response_time_framework" />
+          <ScalarProperty Name="Open_Jobs_outside_respons_frame_1" ColumnName="Open_Jobs_outside_respons_frame_1" />
+          <ScalarProperty Name="Open_Jobs_outside_respons_frame_2" ColumnName="Open_Jobs_outside_respons_frame_2" />
+          <ScalarProperty Name="Open_Jobs_outside_respons_frame_3" ColumnName="Open_Jobs_outside_respons_frame_3" />
+          <ScalarProperty Name="Percent_Total_SD_Outside" ColumnName="Percent_Total_SD_Outside" />
+          <ScalarProperty Name="Percent_SD_Open_Outside" ColumnName="Percent_SD_Open_Outside" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SQL_DASH">
+      <EntityTypeMapping TypeName="WMSModel.SQL_DASH">
+        <MappingFragment StoreEntitySet="SQL_DASH">
+          <ScalarProperty Name="CTRL" ColumnName="CTRL" />
+          <ScalarProperty Name="CRDATE" ColumnName="CRDATE" />
+          <ScalarProperty Name="CRTIME" ColumnName="CRTIME" />
+          <ScalarProperty Name="CWDATE" ColumnName="CWDATE" />
+          <ScalarProperty Name="CWTIME" ColumnName="CWTIME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="STATUS_DATE" ColumnName="STATUS_DATE" />
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="FAULT_TYPE" ColumnName="FAULT_TYPE" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="GISKEY" ColumnName="GISKEY" />
+          <ScalarProperty Name="TOWNSHIP" ColumnName="TOWNSHIP" />
+          <ScalarProperty Name="RESPONSE_TIME" ColumnName="RESPONSE_TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetReferenceNumber" FunctionName="WMSModel.Store.spGetReferenceNumber">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSModel.spGetReferenceNumber_Result">
+          <ScalarProperty Name="CTRL" ColumnName="CTRL" />
+          <ScalarProperty Name="CRDATE" ColumnName="CRDATE" />
+          <ScalarProperty Name="CRTIME" ColumnName="CRTIME" />
+          <ScalarProperty Name="CWDATE" ColumnName="CWDATE" />
+          <ScalarProperty Name="CWTIME" ColumnName="CWTIME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="STATUS_DATE" ColumnName="STATUS_DATE" />
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="FAULT_TYPE" ColumnName="FAULT_TYPE" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="GISKEY" ColumnName="GISKEY" />
+          <ScalarProperty Name="TOWNSHIP" ColumnName="TOWNSHIP" />
+          <ScalarProperty Name="RESPONSE_TIME" ColumnName="RESPONSE_TIME" />
+          <ScalarProperty Name="Cntrl_num" ColumnName="Cntrl_num" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Fault" ColumnName="Fault" />
+          <ScalarProperty Name="Township1" ColumnName="Township1" />
+          <ScalarProperty Name="Stand" ColumnName="Stand" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Street_No" ColumnName="Street_No" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Recieved_HD" ColumnName="Recieved_HD" />
+          <ScalarProperty Name="Receive_DateT" ColumnName="Receive_DateT" />
+          <ScalarProperty Name="Start_DateT" ColumnName="Start_DateT" />
+          <ScalarProperty Name="Delay_DateT" ColumnName="Delay_DateT" />
+          <ScalarProperty Name="Completed_DateT" ColumnName="Completed_DateT" />
+          <ScalarProperty Name="Escalation_Time" ColumnName="Escalation_Time" />
+          <ScalarProperty Name="Assigned_unit_Mac" ColumnName="Assigned_unit_Mac" />
+          <ScalarProperty Name="Completed_Desc" ColumnName="Completed_Desc" />
+          <ScalarProperty Name="Delayed_Desc" ColumnName="Delayed_Desc" />
+          <ScalarProperty Name="Revison" ColumnName="Revison" />
+          <ScalarProperty Name="Data_Changed" ColumnName="Data_Changed" />
+          <ScalarProperty Name="Client_Mun" ColumnName="Client_Mun" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetUserByEmailPassword" FunctionName="WMSModel.Store.spGetUserByEmailPassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSModel.spGetUserByEmailPassword_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Security_Level" ColumnName="Security_Level" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

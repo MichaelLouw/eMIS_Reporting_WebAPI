@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eMIS_MobileModelStoreContainer" CdmEntityContainer="eMIS_MobileEntities1">
+    <FunctionImportMapping FunctionImportName="spJobControl" FunctionName="eMIS_MobileModel.Store.spJobControl">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel.spJobControl_Result">
+          <ScalarProperty Name="Device_Desc" ColumnName="Device_Desc" />
+          <ScalarProperty Name="JobsAlocated" ColumnName="JobsAlocated" />
+          <ScalarProperty Name="JobsReceived" ColumnName="JobsReceived" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Assigned_unit_Mac" ColumnName="Assigned_unit_Mac" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Cntrl_num" ColumnName="Cntrl_num" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spJobControl1" FunctionName="eMIS_MobileModel.Store.spJobControl">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eMIS_MobileModel.spJobControl_Result">
+          <ScalarProperty Name="Device_Desc" ColumnName="Device_Desc" />
+          <ScalarProperty Name="JobsAlocated" ColumnName="JobsAlocated" />
+          <ScalarProperty Name="JobsReceived" ColumnName="JobsReceived" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Assigned_unit_Mac" ColumnName="Assigned_unit_Mac" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Cntrl_num" ColumnName="Cntrl_num" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eMIS_MobileModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Call">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Case_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Division" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Street1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Street2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Street3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Case_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CallTypes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SLA" Type="Int32" />
+    <Property Name="DateTimeStampSent" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Calls_v2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CTRL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Division" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StreetName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StreetNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FAULT_TYPE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RESPONSE_TIME" Type="Int32" Nullable="false" />
+    <Property Name="CRDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TelephoneNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Area" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Township" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Processed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="COMPLAINT">
+    <Key>
+      <PropertyRef Name="COMPNO" />
+    </Key>
+    <Property Name="COMPNO" Type="Int32" Nullable="false" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="GISKEY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MYTEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="eMis_Mobile">
+    <Key>
+      <PropertyRef Name="Cntrl_num" />
+    </Key>
+    <Property Name="Cntrl_num" Type="Int32" Nullable="false" />
+    <Property Name="Duration" Type="DateTime" Precision="3" />
+    <Property Name="Fault" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Township" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Stand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Street" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Street_No" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Recieved_HD" Type="DateTime" Precision="3" />
+    <Property Name="Receive_DateT" Type="DateTime" Precision="3" />
+    <Property Name="Start_DateT" Type="DateTime" Precision="3" />
+    <Property Name="Delay_DateT" Type="DateTime" Precision="3" />
+    <Property Name="Completed_DateT" Type="DateTime" Precision="3" />
+    <Property Name="Escalation_Time" Type="Time" Precision="7" />
+    <Property Name="Assigned_unit_Mac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Completed_Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Delayed_Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Revison" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="Data_Changed" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Client_Mun" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="emis_mobile_devices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="reload_time" Type="Int32" />
+    <Property Name="Department" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="Record" Type="Int32" />
+    <Property Name="Update" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Client_Mun" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Device_Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sup_Mac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UseWifiOnly4Photos" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="emis_mobile_gps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Lat" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Long" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IMEI_Num" Type="Int32" />
+    <Property Name="Date_Time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="emis_notifications_sent">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cntrl_num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateTimeSent" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="faultreason">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="history_store">
+    <Key>
+      <PropertyRef Name="table_name" />
+      <PropertyRef Name="pk_date_dest" />
+    </Key>
+    <Property Name="timemark" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="table_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pk_date_src" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pk_date_dest" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="record_state" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HM_Devices">
+    <Key>
+      <PropertyRef Name="DeviceID" />
+    </Key>
+    <Property Name="DeviceID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Municipality" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GCMToken" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionPort" Type="Int32" />
+    <Property Name="SettingsURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SettingsPort" Type="Int32" />
+    <Property Name="Reading1RangeMin" Type="Int32" Nullable="false" />
+    <Property Name="Reading1RangeMax" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HM_FaultReasons">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HM_HandyManReadings">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MeterNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Township" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Stand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Portion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StreetNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="StreetName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Reading1" Type="Int32" />
+    <Property Name="Reading2" Type="Int32" />
+    <Property Name="NoReadingReason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FaultReason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Updated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Inserted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Checksum" Type="Binary" MaxLength="32" FixedLength="false" />
+    <Property Name="Reading1MinRange" Type="Int32" />
+    <Property Name="Reading1MaxRange" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HM_NoReadingReasons">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAPTEST">
+    <Key>
+      <PropertyRef Name="GISKEY" />
+    </Key>
+    <Property Name="GISKEY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TEST" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Hello" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="COMPNO" Type="Int32" />
+    <Property Name="Column_5" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Comp">
+    <Key>
+      <PropertyRef Name="COMPNO" />
+      <PropertyRef Name="CRDATE" />
+      <PropertyRef Name="CRHOURS" />
+      <PropertyRef Name="CRMIN" />
+      <PropertyRef Name="CRSEC" />
+      <PropertyRef Name="CCDATE" />
+      <PropertyRef Name="CCHOURS" />
+      <PropertyRef Name="CCMIN" />
+      <PropertyRef Name="CCSEC" />
+      <PropertyRef Name="CWDATE" />
+      <PropertyRef Name="CWHOURS" />
+      <PropertyRef Name="CWMIN" />
+      <PropertyRef Name="CWSEC" />
+      <PropertyRef Name="HOWREC" />
+      <PropertyRef Name="NAME" />
+      <PropertyRef Name="TEL" />
+      <PropertyRef Name="TELHOME" />
+      <PropertyRef Name="TDESC" />
+      <PropertyRef Name="TOWN" />
+      <PropertyRef Name="STAND" />
+      <PropertyRef Name="PORTION" />
+      <PropertyRef Name="LEAD" />
+      <PropertyRef Name="ADDNO" />
+      <PropertyRef Name="ADDSTREET" />
+      <PropertyRef Name="FAULT_DESC" />
+      <PropertyRef Name="URGENCY" />
+      <PropertyRef Name="COMMENT" />
+      <PropertyRef Name="CORNER_A" />
+      <PropertyRef Name="TIMESHEET_" />
+      <PropertyRef Name="MAN_" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="DEPT" />
+      <PropertyRef Name="TEAM" />
+      <PropertyRef Name="TS_BACK" />
+      <PropertyRef Name="TS_DATE" />
+      <PropertyRef Name="ACCOUNT" />
+      <PropertyRef Name="CUMETER" />
+      <PropertyRef Name="PLACEMENT_NO" />
+      <PropertyRef Name="PROPREF" />
+      <PropertyRef Name="AREA" />
+      <PropertyRef Name="INSTALL_TYPE" />
+      <PropertyRef Name="ACTION_CODE" />
+      <PropertyRef Name="TEST_TIME" />
+      <PropertyRef Name="COMMENTS_NEW" />
+      <PropertyRef Name="PAGENO" />
+      <PropertyRef Name="CRTIME" />
+      <PropertyRef Name="CWTIME" />
+      <PropertyRef Name="OPERATOR" />
+      <PropertyRef Name="SEWMAIN" />
+      <PropertyRef Name="SEWSTAND" />
+      <PropertyRef Name="ACCEPT_CHARGE" />
+      <PropertyRef Name="PRINT_FLAG" />
+      <PropertyRef Name="EMAIL_FLAG" />
+      <PropertyRef Name="EMAIL_ON" />
+      <PropertyRef Name="EMAIL_TIME" />
+      <PropertyRef Name="FAX_FLAG" />
+      <PropertyRef Name="FAX_ON" />
+      <PropertyRef Name="FAX_TIME" />
+      <PropertyRef Name="CCTIME" />
+      <PropertyRef Name="CFDATE" />
+      <PropertyRef Name="CFTIME" />
+      <PropertyRef Name="FRONT_DESK" />
+      <PropertyRef Name="URGENT" />
+      <PropertyRef Name="PLANT_ASSET" />
+      <PropertyRef Name="SMS_FLAG" />
+      <PropertyRef Name="SMS_ON" />
+      <PropertyRef Name="LETTER_FLAG" />
+      <PropertyRef Name="LETTER_ON" />
+      <PropertyRef Name="EMAIL_ADDRESS" />
+      <PropertyRef Name="FAX_NUMBER" />
+      <PropertyRef Name="VACUM" />
+      <PropertyRef Name="CCDPERS" />
+      <PropertyRef Name="CFDPERS" />
+      <PropertyRef Name="GISKEY" />
+      <PropertyRef Name="PARK_DATE" />
+      <PropertyRef Name="PARK_PERS" />
+      <PropertyRef Name="ORIGINAL" />
+      <PropertyRef Name="SEWTANKKEY" />
+      <PropertyRef Name="PAYMENT_AMOUNT" />
+      <PropertyRef Name="PAYMENT_RECIEPT" />
+      <PropertyRef Name="PAYMENT_DATE" />
+      <PropertyRef Name="JC_SORT" />
+    </Key>
+    <Property Name="COMPNO" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CRDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CRHOURS" Type="Int32" Nullable="false" />
+    <Property Name="CRMIN" Type="Int16" Nullable="false" />
+    <Property Name="CRSEC" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="CCDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CCHOURS" Type="Int16" Nullable="false" />
+    <Property Name="CCMIN" Type="Int16" Nullable="false" />
+    <Property Name="CCSEC" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="CWDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CWHOURS" Type="Int32" Nullable="false" />
+    <Property Name="CWMIN" Type="Int16" Nullable="false" />
+    <Property Name="CWSEC" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="HOWREC" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="25" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TEL" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TELHOME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TDESC" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TOWN" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="STAND" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PORTION" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="LEAD" Type="Int16" Nullable="false" />
+    <Property Name="ADDNO" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ADDSTREET" Type="String" MaxLength="25" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FAULT_DESC" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="URGENCY" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="COMMENT" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CORNER_A" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TIMESHEET_" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MAN_" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DEPT" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TEAM" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TS_BACK" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TS_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ACCOUNT" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CUMETER" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PLACEMENT_NO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PROPREF" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AREA" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="INSTALL_TYPE" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ACTION_CODE" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TEST_TIME" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="COMMENTS_NEW" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PAGENO" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CRTIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CWTIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="OPERATOR" Type="String" MaxLength="35" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SEWMAIN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SEWSTAND" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ACCEPT_CHARGE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PRINT_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL_ON" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EMAIL_TIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FAX_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FAX_ON" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FAX_TIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CCTIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CFDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CFTIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FRONT_DESK" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="URGENT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PLANT_ASSET" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SMS_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SMS_ON" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LETTER_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="LETTER_ON" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EMAIL_ADDRESS" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FAX_NUMBER" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="VACUM" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CCDPERS" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CFDPERS" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GISKEY" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PARK_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PARK_PERS" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ORIGINAL" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SEWTANKKEY" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PAYMENT_AMOUNT" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="PAYMENT_RECIEPT" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PAYMENT_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="JC_SORT" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="emis_mobile_comp_list">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Value" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Client_Mun" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="emis_mobile_delay_list">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Value" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Client_Mun" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="emis_mobile_devices_allocation">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="TOWNSHIP" />
+      <PropertyRef Name="DEPT" />
+      <PropertyRef Name="AREA" />
+      <PropertyRef Name="SUB_AREA" />
+      <PropertyRef Name="STANDBY_T_MAC" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="10" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TOWNSHIP" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DEPT" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AREA" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="STANDBY_CELL_T" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="STANDBY_CELL_S" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Dispatch_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SUB_AREA" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL_1" Type="String" MaxLength="200" FixedLength="true" Unicode="false" />
+    <Property Name="EMIS_2" Type="String" MaxLength="200" FixedLength="true" Unicode="false" />
+    <Property Name="SEND_EMAIL" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="DAYTIME_CELL" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="DAYTIME_AREA" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="STANDBY_S_MAC" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="STANDBY_T_MAC" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DAYTIME_MAC" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="DISTRICT" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="emis_mobile_locationlogger">
+    <Key>
+      <PropertyRef Name="DeviceID" />
+      <PropertyRef Name="Latitude" />
+      <PropertyRef Name="Longitude" />
+      <PropertyRef Name="TimeStamp" />
+      <PropertyRef Name="Inserted" />
+    </Key>
+    <Property Name="DeviceID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Latitude" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Longitude" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Inserted" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="emis_mobile_standby">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SS_IMEI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUP_IMEI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SS_IMEI_ChangeTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="eMis_MobileH">
+    <Key>
+      <PropertyRef Name="Cntrl_num" />
+    </Key>
+    <Property Name="Cntrl_num" Type="Int32" Nullable="false" />
+    <Property Name="Duration" Type="DateTime" Precision="3" />
+    <Property Name="Fault" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Township" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Stand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Street" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Street_No" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Recieved_HD" Type="DateTime" Precision="3" />
+    <Property Name="Receive_DateT" Type="DateTime" Precision="3" />
+    <Property Name="Start_DateT" Type="DateTime" Precision="3" />
+    <Property Name="Delay_DateT" Type="DateTime" Precision="3" />
+    <Property Name="Completed_DateT" Type="DateTime" Precision="3" />
+    <Property Name="Escalation_Time" Type="Time" Precision="7" />
+    <Property Name="Assigned_unit_Mac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Completed_Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Delay_Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Revision" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="Data_Changed" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="emis_notifications">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="device_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="message" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="M_Dash_Totals">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="DEPT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Total_Jobs" Type="Int32" />
+    <Property Name="Jobs_Over" Type="Int32" />
+    <Property Name="Jobs_in_Time" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Job_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Jobs_no_Response_Time" Type="Int32" />
+    <Property Name="Open_Jobs_inside_response_time_framework" Type="Int32" />
+    <Property Name="Open_Jobs_outside_response_time_framework" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SQL_DASH">
+    <Key>
+      <PropertyRef Name="CTRL" />
+      <PropertyRef Name="CRDATE" />
+      <PropertyRef Name="CRTIME" />
+      <PropertyRef Name="CWDATE" />
+      <PropertyRef Name="CWTIME" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="STATUS_DATE" />
+      <PropertyRef Name="DEPT" />
+      <PropertyRef Name="FAULT_TYPE" />
+      <PropertyRef Name="AREA" />
+      <PropertyRef Name="GISKEY" />
+      <PropertyRef Name="TOWNSHIP" />
+      <PropertyRef Name="RESPONSE_TIME" />
+    </Key>
+    <Property Name="CTRL" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CRDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CRTIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CWDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CWTIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="STATUS_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DEPT" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FAULT_TYPE" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AREA" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GISKEY" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TOWNSHIP" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="RESPONSE_TIME" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tabi_Data">
+    <Key>
+      <PropertyRef Name="Row_ID" />
+    </Key>
+    <Property Name="Agent_ID" Type="Int32" />
+    <Property Name="Ani" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Call_Date" Type="DateTime" Precision="3" />
+    <Property Name="Call_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Campaign" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comment" Type="String" MaxLength="900" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_ID" Type="Int32" />
+    <Property Name="dnis" Type="Int32" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="End_Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Queue" Type="Int32" />
+    <Property Name="Status_Code" Type="Int32" />
+    <Property Name="Status_Detail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status_Text" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Firstname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Lastname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Row_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="eMIS_MobileEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Calls" EntityType="Self.Call" />
+    <EntitySet Name="Calls_v2" EntityType="Self.Calls_v2" />
+    <EntitySet Name="COMPLAINTS" EntityType="Self.COMPLAINT" />
+    <EntitySet Name="eMis_Mobile" EntityType="Self.eMis_Mobile" />
+    <EntitySet Name="emis_mobile_devices" EntityType="Self.emis_mobile_devices" />
+    <EntitySet Name="emis_mobile_gps" EntityType="Self.emis_mobile_gps" />
+    <EntitySet Name="emis_notifications_sent" EntityType="Self.emis_notifications_sent" />
+    <EntitySet Name="faultreasons" EntityType="Self.faultreason" />
+    <EntitySet Name="history_store" EntityType="Self.history_store" />
+    <EntitySet Name="HM_Devices" EntityType="Self.HM_Devices" />
+    <EntitySet Name="HM_FaultReasons" EntityType="Self.HM_FaultReasons" />
+    <EntitySet Name="HM_HandyManReadings" EntityType="Self.HM_HandyManReadings" />
+    <EntitySet Name="HM_NoReadingReasons" EntityType="Self.HM_NoReadingReasons" />
+    <EntitySet Name="MAPTESTs" EntityType="Self.MAPTEST" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Comps" EntityType="Self.Comp" />
+    <EntitySet Name="emis_mobile_comp_list" EntityType="Self.emis_mobile_comp_list" />
+    <EntitySet Name="emis_mobile_delay_list" EntityType="Self.emis_mobile_delay_list" />
+    <EntitySet Name="emis_mobile_devices_allocation" EntityType="Self.emis_mobile_devices_allocation" />
+    <EntitySet Name="emis_mobile_locationlogger" EntityType="Self.emis_mobile_locationlogger" />
+    <EntitySet Name="emis_mobile_standby" EntityType="Self.emis_mobile_standby" />
+    <EntitySet Name="eMis_MobileH" EntityType="Self.eMis_MobileH" />
+    <EntitySet Name="emis_notifications" EntityType="Self.emis_notifications" />
+    <EntitySet Name="M_Dash_Totals" EntityType="Self.M_Dash_Totals" />
+    <EntitySet Name="SQL_DASH" EntityType="Self.SQL_DASH" />
+    <EntitySet Name="Tabi_Data" EntityType="Self.Tabi_Data" />
+    <FunctionImport Name="ListComplaints" ReturnType="Collection(eMIS_MobileModel1.ListComplaints_Result)" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="spGetAvailableDevices" ReturnType="Collection(eMIS_MobileModel1.spGetAvailableDevices_Result)">
+      <Parameter Name="assignedImei" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetJobsForTownshipDeviceAssigned" ReturnType="Collection(eMIS_MobileModel1.spGetJobsForTownshipDeviceAssigned_Result)">
+      <Parameter Name="township" Mode="In" Type="String" />
+      <Parameter Name="assignedImei" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetJobsPerDevice" ReturnType="Collection(eMIS_MobileModel1.spGetJobsPerDevice_Result)">
+      <Parameter Name="supervisorImei" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetJobsPerTownship" ReturnType="Collection(eMIS_MobileModel1.spGetJobsPerTownship_Result)">
+      <Parameter Name="supervisorImei" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetJobsPerTownshipDevice" ReturnType="Collection(eMIS_MobileModel1.spGetJobsPerTownshipDevice_Result)">
+      <Parameter Name="supervisorImei" Mode="In" Type="String" />
+      <Parameter Name="township" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetJobsPerTownshipDeviceAssigned" ReturnType="Collection(eMIS_MobileModel1.spGetJobsPerTownshipDeviceAssigned_Result)">
+      <Parameter Name="supervisorImei" Mode="In" Type="String" />
+      <Parameter Name="township" Mode="In" Type="String" />
+      <Parameter Name="assignedImei" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetJobsPerTownshipForDevice" ReturnType="Collection(eMIS_MobileModel1.spGetJobsPerTownshipForDevice_Result)">
+      <Parameter Name="assignedImei" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spJobControl" ReturnType="Collection(eMIS_MobileModel1.spJobControl_Result1)">
+      <Parameter Name="Department" Mode="In" Type="String" />
+      <Parameter Name="Municipality" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateJob" ReturnType="Collection(eMIS_MobileModel1.spUpdateJob_Result)">
+      <Parameter Name="controlNumber" Mode="In" Type="Int32" />
+      <Parameter Name="comments" Mode="In" Type="String" />
+      <Parameter Name="assignedImei" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="ListComplaints_Result">
+    <Property Type="Int32" Name="COMPNO" Nullable="false" />
+    <Property Type="DateTime" Name="DATE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="GISKEY" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MYTEXT" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetAvailableDevices_Result">
+    <Property Type="String" Name="id" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="16" />
+    <Property Type="Int32" Name="OpenJobs" Nullable="true" />
+    <Property Type="String" Name="Device_Desc" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetJobsForTownshipDeviceAssigned_Result">
+    <Property Type="Int32" Name="Cntrl_num" Nullable="false" />
+    <Property Type="String" Name="Township" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Fault" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Duration" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Recieved_HD" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Stand" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Street" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Street_No" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Delayed_Desc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JobAge" Nullable="true" MaxLength="257" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spGetJobsPerDevice_Result">
+    <Property Type="String" Name="Device_Desc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Imei" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="NrOfJobsPerDevice" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spGetJobsPerTownship_Result">
+    <Property Type="Int32" Name="NrOfJobsPerTownship" Nullable="true" />
+    <Property Type="String" Name="Township" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spGetJobsPerTownshipDevice_Result">
+    <Property Type="String" Name="Assigned_unit_Mac" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="NrOfJobsPerDevice" Nullable="true" />
+    <Property Type="String" Name="Device_Desc" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetJobsPerTownshipDeviceAssigned_Result">
+    <Property Type="Int32" Name="Cntrl_num" Nullable="false" />
+    <Property Type="String" Name="Township" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Fault" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Duration" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Recieved_HD" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Stand" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Street" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Street_No" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spGetJobsPerTownshipForDevice_Result">
+    <Property Type="Int32" Name="NrOfJobsPerTownship" Nullable="true" />
+    <Property Type="String" Name="Township" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spJobControl_Result">
+    <Property Type="String" Name="Device_Desc" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="JobsAlocated" Nullable="true" />
+    <Property Type="Int32" Name="JobsReceived" Nullable="false" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Assigned_unit_Mac" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cntrl_num" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spUpdateJob_Result">
+    <Property Type="Int32" Name="Cntrl_num" Nullable="false" />
+    <Property Type="DateTime" Name="Duration" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Fault" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Township" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Stand" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Street" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Street_No" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Recieved_HD" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Receive_DateT" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Start_DateT" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Delay_DateT" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Completed_DateT" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="Escalation_Time" Nullable="true" />
+    <Property Type="String" Name="Assigned_unit_Mac" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Completed_Desc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Delayed_Desc" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Revison" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="String" Name="Data_Changed" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Client_Mun" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="spJobControl_Result1">
+    <Property Type="String" Name="Device_Desc" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="JobsAlocated" Nullable="true" />
+    <Property Type="Int32" Name="JobsReceived" Nullable="false" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Assigned_unit_Mac" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cntrl_num" Nullable="true" />
+  </ComplexType>
+</Schema>

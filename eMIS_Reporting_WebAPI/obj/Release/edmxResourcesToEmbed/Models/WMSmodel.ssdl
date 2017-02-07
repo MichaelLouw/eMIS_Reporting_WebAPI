@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'WMS.dbo.Ancel' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Ancel">
+          <Property Name="test" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'WMS.dbo.BO_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BO_User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="Surname" Type="varchar" MaxLength="250" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="Security_Level" Type="int" />
+    <Property Name="Contact_Number" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="User_Name" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'WMS.dbo.Customer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="RECNUM" />
+      <PropertyRef Name="Customer_Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="City" />
+      <PropertyRef Name="State" />
+      <PropertyRef Name="Zip" />
+      <PropertyRef Name="Phone_Number" />
+      <PropertyRef Name="Fax_Number" />
+      <PropertyRef Name="EMail_Address" />
+      <PropertyRef Name="Credit_Limit" />
+      <PropertyRef Name="Purchases" />
+      <PropertyRef Name="Balance" />
+      <PropertyRef Name="Comments" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="RECNUM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="Address" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="City" Type="char" MaxLength="14" Nullable="false" />
+    <Property Name="State" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Zip" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Phone_Number" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="Fax_Number" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="EMail_Address" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="Credit_Limit" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Purchases" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Balance" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Comments" Type="text" Nullable="false" />
+    <Property Name="Status" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'WMS.dbo.Finance_Demo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Finance_Demo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Spent" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'WMS.dbo.Finance_Demo2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Finance_Demo2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Spent" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'WMS.dbo.M_Dash_Totals' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="M_Dash_Totals">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="DEPT" Type="varchar" MaxLength="50" />
+    <Property Name="Total_Jobs" Type="int" />
+    <Property Name="Jobs_Over" Type="int" />
+    <Property Name="Jobs_in_Time" Type="int" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Job_Type" Type="varchar" MaxLength="20" />
+    <Property Name="Jobs_no_Response_Time" Type="int" />
+    <Property Name="Open_Jobs_inside_response_time_framework" Type="int" />
+    <Property Name="Open_Jobs_outside_response_time_framework" Type="int" />
+    <Property Name="Open_Jobs_outside_respons_frame_1" Type="int" />
+    <Property Name="Open_Jobs_outside_respons_frame_2" Type="int" />
+    <Property Name="Open_Jobs_outside_respons_frame_3" Type="int" />
+    <Property Name="Percent_Total_SD_Outside" Type="float" />
+    <Property Name="Percent_SD_Open_Outside" Type="float" />
+  </EntityType>
+  <EntityType Name="Report_Data">
+    <Key>
+      <PropertyRef Name="Control_Number" />
+    </Key>
+    <Property Name="Control_Number" Type="int" Nullable="false" />
+    <Property Name="Receive_Date" Type="datetime" />
+    <Property Name="Finish_Date" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="Status_Date" Type="datetime" />
+    <Property Name="Department" Type="varchar" MaxLength="250" />
+    <Property Name="Fault" Type="varchar" MaxLength="250" />
+    <Property Name="Area" Type="varchar" MaxLength="500" />
+    <Property Name="GIS_ID" Type="int" />
+    <Property Name="Township" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'WMS.dbo.Report_Status' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Report_Status">
+          <Property Name="Data_Refresh" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'WMS.dbo.SQL_DASH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SQL_DASH">
+    <Key>
+      <PropertyRef Name="CTRL" />
+      <PropertyRef Name="CRDATE" />
+      <PropertyRef Name="CRTIME" />
+      <PropertyRef Name="CWTIME" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="STATUS_DATE" />
+      <PropertyRef Name="DEPT" />
+      <PropertyRef Name="FAULT_TYPE" />
+      <PropertyRef Name="AREA" />
+      <PropertyRef Name="GISKEY" />
+      <PropertyRef Name="TOWNSHIP" />
+      <PropertyRef Name="RESPONSE_TIME" />
+    </Key>
+    <Property Name="CTRL" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CRDATE" Type="datetime" Nullable="false" />
+    <Property Name="CRTIME" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="CWDATE" Type="datetime" />
+    <Property Name="CWTIME" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="STATUS" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="STATUS_DATE" Type="datetime" Nullable="false" />
+    <Property Name="DEPT" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="FAULT_TYPE" Type="char" MaxLength="40" Nullable="false" />
+    <Property Name="AREA" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="GISKEY" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="TOWNSHIP" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="RESPONSE_TIME" Type="numeric" Precision="12" Scale="2" Nullable="false" />
+  </EntityType>
+  <Function Name="spGetReferenceNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CTRL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetUserByEmailPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="WMSModelStoreContainer">
+    <EntitySet Name="Report_Data" EntityType="Self.Report_Data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BO_User" EntityType="Self.BO_User" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BO_User].[User_ID] AS [User_ID], 
+    [BO_User].[Name] AS [Name], 
+    [BO_User].[Surname] AS [Surname], 
+    [BO_User].[Password] AS [Password], 
+    [BO_User].[Security_Level] AS [Security_Level], 
+    [BO_User].[Contact_Number] AS [Contact_Number], 
+    [BO_User].[Email] AS [Email], 
+    [BO_User].[User_Name] AS [User_Name]
+    FROM [dbo].[BO_User] AS [BO_User]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Customer" EntityType="Self.Customer" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Customer].[RECNUM] AS [RECNUM], 
+    [Customer].[Customer_Number] AS [Customer_Number], 
+    [Customer].[Name] AS [Name], 
+    [Customer].[Address] AS [Address], 
+    [Customer].[City] AS [City], 
+    [Customer].[State] AS [State], 
+    [Customer].[Zip] AS [Zip], 
+    [Customer].[Phone_Number] AS [Phone_Number], 
+    [Customer].[Fax_Number] AS [Fax_Number], 
+    [Customer].[EMail_Address] AS [EMail_Address], 
+    [Customer].[Credit_Limit] AS [Credit_Limit], 
+    [Customer].[Purchases] AS [Purchases], 
+    [Customer].[Balance] AS [Balance], 
+    [Customer].[Comments] AS [Comments], 
+    [Customer].[Status] AS [Status]
+    FROM [dbo].[Customer] AS [Customer]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Finance_Demo" EntityType="Self.Finance_Demo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Finance_Demo].[ID] AS [ID], 
+    [Finance_Demo].[Date] AS [Date], 
+    [Finance_Demo].[Amount] AS [Amount], 
+    [Finance_Demo].[Spent] AS [Spent]
+    FROM [dbo].[Finance_Demo] AS [Finance_Demo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Finance_Demo2" EntityType="Self.Finance_Demo2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Finance_Demo2].[ID] AS [ID], 
+    [Finance_Demo2].[Date] AS [Date], 
+    [Finance_Demo2].[Amount] AS [Amount], 
+    [Finance_Demo2].[Spent] AS [Spent]
+    FROM [dbo].[Finance_Demo2] AS [Finance_Demo2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="M_Dash_Totals" EntityType="Self.M_Dash_Totals" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [M_Dash_Totals].[DEPT] AS [DEPT], 
+    [M_Dash_Totals].[Total_Jobs] AS [Total_Jobs], 
+    [M_Dash_Totals].[Jobs_Over] AS [Jobs_Over], 
+    [M_Dash_Totals].[Jobs_in_Time] AS [Jobs_in_Time], 
+    [M_Dash_Totals].[ID] AS [ID], 
+    [M_Dash_Totals].[Job_Type] AS [Job_Type], 
+    [M_Dash_Totals].[Jobs_no_Response_Time] AS [Jobs_no_Response_Time], 
+    [M_Dash_Totals].[Open_Jobs_inside_response_time_framework] AS [Open_Jobs_inside_response_time_framework], 
+    [M_Dash_Totals].[Open_Jobs_outside_response_time_framework] AS [Open_Jobs_outside_response_time_framework], 
+    [M_Dash_Totals].[Open_Jobs_outside_respons_frame_1] AS [Open_Jobs_outside_respons_frame_1], 
+    [M_Dash_Totals].[Open_Jobs_outside_respons_frame_2] AS [Open_Jobs_outside_respons_frame_2], 
+    [M_Dash_Totals].[Open_Jobs_outside_respons_frame_3] AS [Open_Jobs_outside_respons_frame_3], 
+    [M_Dash_Totals].[Percent_Total_SD_Outside] AS [Percent_Total_SD_Outside], 
+    [M_Dash_Totals].[Percent_SD_Open_Outside] AS [Percent_SD_Open_Outside]
+    FROM [dbo].[M_Dash_Totals] AS [M_Dash_Totals]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SQL_DASH" EntityType="Self.SQL_DASH" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SQL_DASH].[CTRL] AS [CTRL], 
+    [SQL_DASH].[CRDATE] AS [CRDATE], 
+    [SQL_DASH].[CRTIME] AS [CRTIME], 
+    [SQL_DASH].[CWDATE] AS [CWDATE], 
+    [SQL_DASH].[CWTIME] AS [CWTIME], 
+    [SQL_DASH].[STATUS] AS [STATUS], 
+    [SQL_DASH].[STATUS_DATE] AS [STATUS_DATE], 
+    [SQL_DASH].[DEPT] AS [DEPT], 
+    [SQL_DASH].[FAULT_TYPE] AS [FAULT_TYPE], 
+    [SQL_DASH].[AREA] AS [AREA], 
+    [SQL_DASH].[GISKEY] AS [GISKEY], 
+    [SQL_DASH].[TOWNSHIP] AS [TOWNSHIP], 
+    [SQL_DASH].[RESPONSE_TIME] AS [RESPONSE_TIME]
+    FROM [dbo].[SQL_DASH] AS [SQL_DASH]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

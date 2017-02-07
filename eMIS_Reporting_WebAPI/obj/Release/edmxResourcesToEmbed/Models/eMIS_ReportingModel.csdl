@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eMIS_ReportingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Report">
+    <Key>
+      <PropertyRef Name="reportId" />
+    </Key>
+    <Property Name="reportId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="reportName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="reportDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="parentReportId" Type="Int32" />
+    <Property Name="reportPath" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="reportIcon" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BO_User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Surname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Security_Level" Type="Int32" />
+    <Property Name="Contact_Number" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="User_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Municipality" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="eMIS_ReportingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Reports" EntityType="Self.Report" />
+    <EntitySet Name="BO_User" EntityType="Self.BO_User" />
+    <FunctionImport Name="spGetReports" ReturnType="Collection(eMIS_ReportingModel.spGetReports_Result)" />
+    <FunctionImport Name="spGetUserByEmailPassword" ReturnType="Collection(eMIS_ReportingModel.spGetUserByEmailPassword_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSearchReports" ReturnType="Collection(eMIS_ReportingModel.spSearchReports_Result)">
+      <Parameter Name="search" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spGetReports_Result">
+    <Property Type="Int32" Name="reportId" Nullable="false" />
+    <Property Type="String" Name="reportName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="reportDescription" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="parentReportId" Nullable="true" />
+    <Property Type="String" Name="reportPath" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="reportIcon" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="spGetUserByEmailPassword_Result">
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Surname" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="Security_Level" Nullable="true" />
+    <Property Type="String" Name="Contact_Number" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="User_Name" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Municipality" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="spSearchReports_Result">
+    <Property Type="Int32" Name="reportId" Nullable="false" />
+    <Property Type="String" Name="reportName" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="reportDescription" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="parentReportId" Nullable="true" />
+    <Property Type="String" Name="reportPath" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="reportIcon" Nullable="true" MaxLength="250" />
+  </ComplexType>
+</Schema>
